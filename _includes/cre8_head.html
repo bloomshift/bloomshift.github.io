@@ -2,8 +2,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
+  <!-- Open Graph data -->
+  <meta property="og:site_name" content="{{ site.title }}" />
+  {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}">
+  {% else %}
+    <meta property="og:title" content="{{ site.title }}">
+  {% endif %}
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="{{ site.url }}/assets/2020/img/og-bloomshift-01.png">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="fb:page_id" content="1107908905965545" />
+  <!-- Facebook Card -->
+  <meta property="article:publisher" content="https://www.facebook.com/bloomshift/" />
+  <meta property="article:author" content="https://www.facebook.com/bloomshift/" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@bloomshift">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:url" content="{{ site.title }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/2020/img/og-tw-bloomshift-01.png">
+  <meta name="twitter:image:alt" content="{{ site.title }} logo">
+  
+  <meta name="keywords" content="bloomshift, digital, agency, marketing, community, narrative, stories, experential, design">
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/cre8/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/cre8/css/fontawesome-all.min.css">
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/cre8/css/style.css">
-  {% include gtag1.html %}
+  {% if jekyll.environment == "production" %}
+    {% include gtag1.html %}
+  {% endif %}
 </head>

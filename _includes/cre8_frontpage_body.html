@@ -1,5 +1,7 @@
 <body>
-    {% include gtag2.html %}
+    {% if jekyll.environment == "production" %}
+        {% include gtag2.html %}
+    {% endif %}
     {% include cre8_nav.html %}
     <header class="container-fluid header">
         <div class="mouse-scroll"></div>
@@ -168,7 +170,7 @@
                         <br>Learn about our story. Get to know our team and culture. Read a bit 
                         <br>about who we are and what we do. Then reach out so we can work together.</p>
                 </div>
-                <!--<div class="btn-holder"> <a href="about.html" class="cr-btn primary">more about us</a>-->
+                <div class="btn-holder"> <a href="{{ site.url }}/about" class="cr-btn primary">more about us</a>
                 </div>
             </div>
         </div>
