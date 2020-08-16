@@ -23,7 +23,7 @@ email: hello@bloomshift.com
 description: >- # this means to ignore newlines until "baseurl:"
   BloomShift&trade; is a brand-first creative agency specializing in content marketing, brand storytelling, video, branding, website design &amp; web development.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://bloomshift.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.bloomshift.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bloomshift
 github_username:  bloomshift
 
